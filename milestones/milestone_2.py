@@ -23,7 +23,7 @@ def build_words_list(new_list=False, number_of_words=5):
         return word_list
 
 
-def choose_word(word_list):
+def choose_word(word_list: list) -> str:
     """
     Choose a random word from the given list.
 
@@ -63,18 +63,20 @@ def check_guess_validity(guess):
     else:
         print("Oops! That is not a valid input.")
 
+if __name__ == '__main__':
+    # test 1
+    word_list = build_words_list()
+    print(word_list)
+    word = choose_word(word_list)
+    print(word)
+    guess = get_user_guess()
+    check_guess_validity(guess)
 
-word_list = build_words_list()
-print(word_list)
-word = choose_word(word_list)
-print(word)
-guess = get_user_guess()
-check_guess_validity(guess)
-
-print('____________________')
-word_list = build_words_list(new_list=True, number_of_words=4)
-print(word_list)
-word = choose_word(word_list)
-print(word)
-guess = get_user_guess()
-check_guess_validity(guess)
+    # test 2
+    print('____________________')
+    word_list = build_words_list(new_list=True, number_of_words=4)
+    print(word_list)
+    word = choose_word(word_list)
+    print(word)
+    guess = get_user_guess()
+    check_guess_validity(guess)
