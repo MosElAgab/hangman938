@@ -60,7 +60,19 @@ Milestone 3 introduces milestone_3.py, which builds upon the previous milestones
 
 
 ## File Structure
-
+```bash
+.
+├── README.md
+├── hangman
+│   └── hangman_Template.py
+├── hangman_env.yml
+├── milestones
+│   ├── __pycache__
+│   │   └── milestone_2.cpython-312.pyc
+│   ├── milestone_2.py
+│   └── milestone_3.py
+└── requirements.txt
+```
 
 ## License Information
 MIT License
