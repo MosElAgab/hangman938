@@ -77,7 +77,7 @@ Milestone 3 introduces milestone_3.py, which builds upon the previous milestones
 ## License Information
 MIT License
 
-Copyright (c) [2023] [Mostafa El Agab]
+Copyright (c) 2023 Mostafa El Agab
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
