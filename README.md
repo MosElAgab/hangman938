@@ -1,4 +1,4 @@
-# Hangman WIP
+# Hangman
 
 ## Table of Content 
 1. [Desciption](#description)
