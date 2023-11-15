@@ -13,6 +13,8 @@ Hangman is a classic game in which a player thinks of a word and the other playe
 
 This is an implementation of the Hangman game, where the computer thinks of a word and the user tries to guess it.
 
+This project is implemented in Python, designed not only for entertainment but also as an educational tool to practise and enhance Python programming skills.
+
 The project is built over several milestones as follow:
 
 ### Milestone 1: Environment Setup
@@ -26,6 +28,10 @@ In this milestone, a naw module milestone_2.py has been added to the project, en
 ### Milestone 3:  User Guess Validation and Word Checking
 
 Milestone 3 introduces milestone_3.py, which builds upon the previous milestones. It includes functions for validating the user's guess, checking if the guess is in the chosen word, and providing appropriate feedback. This adds a crucial layer of interactivity and improves the overall gaming experience.
+
+### Milestone 4:  Class-based Game Implementation
+
+In Milestone 4, the game has been refactored into a class-based structure with milestone_4.py. The Hangman class manages the game state, including the chosen word, guessed letters, and the number of lives remaining. This implementation provides a more modular and object-oriented approach to the Hangman game.
 
 ## Installation Instruction
 

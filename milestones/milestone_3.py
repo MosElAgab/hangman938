@@ -50,7 +50,7 @@ def ask_for_input() -> bool:
     Returns:
     - str: The user's valid letter guess.
     """
-    
+
     while True:
         guess = get_user_guess()
         if validate_user_guess(guess):
@@ -65,3 +65,4 @@ def ask_for_input() -> bool:
 # tests
 if __name__ == '__main__':
     ask_for_input()
+
