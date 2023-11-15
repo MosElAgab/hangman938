@@ -74,9 +74,11 @@ In Milestone 4, the game has been refactored into a class-based structure with m
 ├── hangman_env.yml
 ├── milestones
 │   ├── __pycache__
-│   │   └── milestone_2.cpython-312.pyc
+│   │   ├── milestone_2.cpython-312.pyc
+│   │   └── milestone_4.cpython-312.pyc
 │   ├── milestone_2.py
-│   └── milestone_3.py
+│   ├── milestone_3.py
+│   └── milestone_4.py
 └── requirements.txt
 ```
 

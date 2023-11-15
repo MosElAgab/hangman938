@@ -1,30 +1,62 @@
 import random as r
 
 class Hangman:
+    """
+    A class representing a simple Hangman game.
+
+    Attributes:
+    - word_list (list): A list of words to choose from.
+    - num_lives (int): The number of lives the player has. Default is 5.
+    - __word (str): The randomly chosen word for the game.
+    - word_guessed (list): A list representing the current state of guessed letters in the word.
+    - num_letters (int): The number of unique letters in the chosen word.
+    - list_of_guesses (list): A list of letters that have been guessed.
+
+    Methods:
+    - __init__(self, word_list, num_lives=5): Initialize the Hangman game.
+    - __check_guess(self, guess): Check if the guessed letter is in the word and update the game state.
+    - ask_for_input(self): Prompt the user for a letter guess and update the game state accordingly.
+    """
     word_list: list
-    num_list: int
+    num_lives: int
+    __word: str
     word_guessed: list
     num_letters: int
     list_of_guesses: list
 
     def __init__(self, word_list, num_lives = 5) -> None:
+        """
+        Initialize the Hangman game.
+
+        Parameters:
+        - word_list (list): A list of words to choose from.
+        - num_lives (int): The number of lives the player has. Default is 5.
+        """
         self.word_list = word_list
         self.num_lives = num_lives
-        self.word = r.choice(word_list).lower()
-        self.word_guessed = ['_' for _ in range(len(self.word))]
-        self.num_letters = len(set([letter for letter in self.word]))
+        self.__word = r.choice(word_list).lower()
+        self.word_guessed = ['_' for _ in range(len(self.__word))]
+        self.num_letters = len(set([letter for letter in self.__word]))
         self.list_of_guesses = []
 
-    def check_guess(self, guess):
+    def __check_guess(self, guess):
+        """
+        Check if the guessed letter is in the word and update the game state.
+
+        Parameters:
+        - guess (str): The guessed letter.
+
+        Returns:
+        - None
+        """
         guess = guess.lower()
-        if guess in self.word.lower():
+        if guess in self.__word.lower():
             print(f"Good guess! {guess} is in the word.")
-            for i, letter in enumerate(self.word):
+            for i, letter in enumerate(self.__word):
                 if letter == guess:
                     self.word_guessed[i] = guess
-            print('word guessed', self.word_guessed)
+            print('word guessed', ''.join(self.word_guessed))
             self.num_letters -= 1
-            print(self.num_letters)
         else:
             self.num_lives -= 1
             print(f"Sorry, {guess} is not in the word.")
@@ -33,6 +65,12 @@ class Hangman:
         
     
     def ask_for_input(self):
+        """
+        Prompt the user for a letter guess and update the game state accordingly.
+
+        Returns:
+        - None
+        """
         while True:
             guess = input('Choose a letter please?\n')
             if not guess.isalpha() or not len(guess) == 1:
@@ -40,31 +78,21 @@ class Hangman:
             elif guess in self.list_of_guesses:
                 print("You already tried that letter!")
             else:
-                self.check_guess(guess)
+                self.__check_guess(guess)
                 self.list_of_guesses.append(guess)
-                print('list of guesses', self.list_of_guesses)
                 if self.num_lives < 1:
                     print("Game over :(")
                     break
                 elif '_' not in self.word_guessed:
-                    print(f'Fantastic, you guessed {self.word} correctly!! :)')
+                    print(f'Fantastic, you guessed {self.__word} correctly!! :)')
                     break
                 
 
 
 
-# if __name__ == '__main__':
-#     x = Hangman(['Mango', 'Banana', 'Apple', 'Kiwi', 'Pineapple'])
-#     print(x.word_list)
-#     print(x.num_lives)
-#     print(x.word)
-#     print(x.word_guessed)
-#     print(x.num_letters)
-#     print(x.list_of_guesses)
+
 
 
 if __name__ == '__main__':
     x = Hangman(['Mango', 'Banana', 'Apple', 'Kiwi', 'Pineapple'])
-    print(x.word)
     x.ask_for_input()
-    # print(x.list_of_guesses)
