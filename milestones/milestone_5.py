@@ -88,6 +88,15 @@ class Hangman:
                 
 # function to run the game 
 def play_game(word_list):
+    """
+    Initialize and play the Hangman game.
+
+    Parameters:
+    - word_list (list): A list of words to choose from.
+
+    Returns:
+    - None
+    """
     num_lives = 5
     game = Hangman(word_list, num_lives)
     game.ask_for_input()
