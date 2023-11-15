@@ -33,6 +33,10 @@ Milestone 3 introduces milestone_3.py, which builds upon the previous milestones
 
 In Milestone 4, the game has been refactored into a class-based structure with milestone_4.py. The Hangman class manages the game state, including the chosen word, guessed letters, and the number of lives remaining. This implementation provides a more modular and object-oriented approach to the Hangman game.
 
+### Milestone 5:  Game Class and Game Execution Function
+
+Milestone 5 introduces milestone_5.py, which includes a game class Hangman and a function play_game to run the Hangman game. The Hangman class encapsulates the game logic, and the play_game function initializes and executes the game. This milestone enhances the project's structure and readability.
+
 ## Installation Instruction
 
 ### **Clone the Repository:**
@@ -52,17 +56,19 @@ In Milestone 4, the game has been refactored into a class-based structure with m
     pip install -r requirements.txt
 ```
 ### **Run the Hangman Game:**
+To excute play_fucntion in milestone_5.py file.
 ```bash
-    #TODO
-```
-### **Updating the Conda Environment (if needed)**
-```bash
-    #TODO
-    # FIXME
-    conda env update -f hangman_env.yml -n hangman_env --prune
+    python milestones/milestone_5.py
 ```
 
 ## Usage Instructions
+
+- You have a default of 5 lives.
+- The game will display the current state of the word with underscores for unguessed letters.
+- Enter a letter guess when prompted.
+- If the letter is in the word, it will be revealed, and you will continue guessing.
+- If the letter is not in the word, you will lose a life, and the remaining lives will be displayed.
+- The game continues until you either correctly guess the word or run out of lives.
 
 
 ## File Structure
@@ -78,7 +84,8 @@ In Milestone 4, the game has been refactored into a class-based structure with m
 │   │   └── milestone_4.cpython-312.pyc
 │   ├── milestone_2.py
 │   ├── milestone_3.py
-│   └── milestone_4.py
+│   ├── milestone_4.py
+│   └── milestone_5.py
 └── requirements.txt
 ```
 
