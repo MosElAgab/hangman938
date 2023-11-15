@@ -7,14 +7,12 @@ class Hangman:
     Attributes:
     - word_list (list): A list of words to choose from.
     - num_lives (int): The number of lives the player has. Default is 5.
-    - __word (str): The randomly chosen word for the game.
     - word_guessed (list): A list representing the current state of guessed letters in the word.
     - num_letters (int): The number of unique letters in the chosen word.
     - list_of_guesses (list): A list of letters that have been guessed.
 
     Methods:
     - __init__(self, word_list, num_lives=5): Initialize the Hangman game.
-    - __check_guess(self, guess): Check if the guessed letter is in the word and update the game state.
     - ask_for_input(self): Prompt the user for a letter guess and update the game state accordingly.
     """
     word_list: list
